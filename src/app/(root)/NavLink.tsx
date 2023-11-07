@@ -3,8 +3,9 @@
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { match } from 'ts-pattern'
-import ScrapIcon from '@/svg/ScrapIcon'
+
 import HomeIcon from '@/svg/HomeIcon'
+import ScrapIcon from '@/svg/ScrapIcon'
 
 type Props = {
   href?: NavigationURL
