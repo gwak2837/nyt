@@ -10,7 +10,13 @@
     "no-console": "warn",
     "prefer-const": "off",
 
-    "import/order": "warn",
+    "import/order": [
+      "warn",
+      {
+        "newlines-between": "always",
+        "alphabetize": { "order": "asc", "caseInsensitive": true }
+      }
+    ],
 
     "react/display-name": "off",
     // "react/jsx-sort-props": "warn",
@@ -21,6 +27,7 @@
     "@typescript-eslint/no-explicit-any": "warn",
     "@typescript-eslint/no-misused-promises": ["error", { "checksVoidReturn": false }],
     "@typescript-eslint/no-unused-vars": ["warn", { "varsIgnorePattern": "^_", "argsIgnorePattern": "^_" }],
+    "@typescript-eslint/prefer-nullish-coalescing": "off",
     "@typescript-eslint/restrict-template-expressions": "off",
     "@typescript-eslint/strict-boolean-expressions": "off",
     // "@typescript-eslint/": "off",
