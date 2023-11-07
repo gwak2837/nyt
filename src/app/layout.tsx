@@ -14,6 +14,8 @@ import {
 } from '@/common/constants'
 import ReactHotToast from '@/components/ReactHotToast'
 import NavLink from '@/app/NavLink'
+import 돋보기Icon from '@/svg/돋보기Icon'
+import CalendarIcon from '@/svg/CalendarIcon'
 
 export const metadata: Metadata = {
   metadataBase: new URL(CANONICAL_URL),
@@ -85,7 +87,7 @@ const myFont = localFont({
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="ko" className="text-base md:text-lg">
+    <html lang="ko" className="text-base">
       <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
       <link rel="mask-icon" href="/safari-pinned-tab.svg" color={THEME_COLOR} />
       <meta name="msapplication-TileColor" content="#2b5797" />
@@ -96,9 +98,20 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
 
       <body className={myFont.className}>
-        <div className="mx-auto flex min-h-[100dvh] max-w-[560px] flex-col bg-slate-100">
+        <div className="mx-auto flex min-h-[100dvh] max-w-[560px] flex-col">
+          <div className="sticky top-0 flex gap-[7px] border-b border-[#C4C4C4] bg-white px-[20px] py-[13px]">
+            <div className="flex items-center gap-1 rounded-full border border-[#C4C4C4] px-3 py-1">
+              <돋보기Icon width="16" />
+              <span className="leading text-[14px] leading-6">전체 헤드라인</span>
+            </div>
+            <div className="flex items-center gap-1 rounded-full border border-[#C4C4C4]">
+              <CalendarIcon width="16" color="#3478F6" />
+              <span className="leading text-[14px] leading-6">전체 날짜</span>
+            </div>
+            <div className="flex items-center gap-1 rounded-full border border-[#C4C4C4]">전체 국가</div>
+          </div>
           <div className="grow">{children}</div>
-          <div className="sticky bottom-0 bg-white">
+          <div className="sticky bottom-0 bg-[#F0F1F4]">
             <nav className=" grid grid-cols-2 items-center rounded-[30px] bg-black text-white">
               <NavLink />
               <NavLink href="/scrap" />

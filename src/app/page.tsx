@@ -7,7 +7,7 @@ import { type PageProps } from '@/common/types'
 
 export default function Home({ params, searchParams }: PageProps) {
   return (
-    <main>
+    <main className="bg-[#F0F1F4]">
       <div>sdf</div>
       <div>sdf</div>
       <div>sdf</div>
