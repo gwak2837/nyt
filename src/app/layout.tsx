@@ -13,6 +13,7 @@ import {
   THEME_COLOR,
 } from '@/common/constants'
 import ReactHotToast from '@/components/ReactHotToast'
+import NavLink from '@/app/NavLink'
 
 export const metadata: Metadata = {
   metadataBase: new URL(CANONICAL_URL),
@@ -95,10 +96,18 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
 
       <body className={myFont.className}>
-        {children}
+        <div className="mx-auto flex min-h-[100dvh] max-w-[560px] flex-col bg-slate-100">
+          <div className="grow">{children}</div>
+          <div className="sticky bottom-0 bg-white">
+            <nav className=" grid grid-cols-2 items-center rounded-[30px] bg-black text-white">
+              <NavLink />
+              <NavLink href="/scrap" />
+            </nav>
+          </div>
+        </div>
         <div id="modal-root" />
+        <ReactHotToast />
       </body>
-      <ReactHotToast />
       <Analytics />
     </html>
   )
