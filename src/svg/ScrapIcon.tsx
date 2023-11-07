@@ -14,13 +14,13 @@ export default function ScrapIcon({ width, className, selected }: Props) {
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <rect x="3" y="2" width="18" height="20" rx="2" stroke={selected ? 'white' : '#6D6D6D'} stroke-width="2" />
+      <rect x="3" y="2" width="18" height="20" rx="2" stroke={selected ? 'white' : '#6D6D6D'} strokeWidth="2" />
       <path
         d="M8 7H16M8 11.5H16M8 16H13.2"
         stroke={selected ? 'white' : '#6D6D6D'}
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
     </svg>
   )
