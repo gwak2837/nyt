@@ -95,7 +95,7 @@ export default function Modal({ children, open, onClose, showCloseButton, showDr
 
   return createPortal(
     <div
-      className={`fixed inset-0 z-20 flex items-center justify-center bg-black/20 transition duration-300 ${c.show[o]}`}
+      className={`fixed inset-0 z-20 flex items-center justify-center bg-black/50 transition duration-300 ${c.show[o]}`}
       onClick={closeModal}
     >
       {showCloseButton && (
