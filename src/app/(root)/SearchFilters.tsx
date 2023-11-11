@@ -23,7 +23,7 @@ export default function SearchFilters() {
   function updateQuerystring() {}
 
   return (
-    <div className="sticky top-0  border-b border-[#C4C4C4] bg-white px-[20px] py-[13px]">
+    <>
       <div className="flex gap-[7px] overflow-x-auto">
         <Filter onClick={() => setIsModalOpened(true)} selected={Boolean(headline)}>
           <돋보기Icon width="16" selected={Boolean(headline)} />
@@ -103,7 +103,7 @@ export default function SearchFilters() {
           </form>
         </div>
       </Modal>
-    </div>
+    </>
   )
 }
 
